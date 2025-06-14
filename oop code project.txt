@@ -60,7 +60,7 @@ public:
     // Display all tasks
     void displayAllTasks() const {
         if (tasks.empty()) {
-            std::cout << "Your To-Do list is empty!" << std::endl;
+            std::cout << "Your TO-DO list is empty!" << std::endl;
             return;
         }
         for (int i = 0; i < tasks.size(); ++i) {
