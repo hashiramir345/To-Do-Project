@@ -39,8 +39,7 @@ private:
 
 public:
     // Add task to the list
-    void addTask(const std::string
-& taskDescription) {
+    void addTask(const std::string& taskDescription) {
         tasks.push_back(Task(taskDescription));
     }
 
@@ -58,10 +57,10 @@ public:
         }
     }
 
-    // Display All tasks
+    // Display all tasks
     void displayAllTasks() const {
         if (tasks.empty()) {
-            std::cout << "Your TO-DO list is empty!" << std::endl;
+            std::cout << "Your To-Do list is empty!" << std::endl;
             return;
         }
         for (int i = 0; i < tasks.size(); ++i) {
@@ -75,7 +74,7 @@ public:
 int main() {
     ToDoList myToDoList;
     int choice;
-    std::string TaskDescription;
+    std::string taskDescription;
     int taskIndex;
 
     do {
@@ -87,7 +86,7 @@ int main() {
         std::cout << "5. Exit\n";
         std::cout << "Enter your choice: ";
         std::cin >> choice;
-        std::cin.ignore();  // To ignore any leftover newline from the previous input
+        std::cin.ignore();  // to ignore any leftover newline from the previous input
 
         switch (choice) {
             case 1:
@@ -102,17 +101,17 @@ int main() {
                 break;
             case 3:
                 std::cout << "Enter task number to mark as complete: ";
-                std::cin >> taskindex;
+                std::cin >> taskIndex;
                 myToDoList.completeTask(taskIndex - 1); // subtract 1 for 0-based index
                 break;
             case 4:
                 myToDoList.displayAllTasks();
                 break;
             case 5:
-                std::cout << "Exiting the To-Do List program. Goodbye!"<< std::endl;
+                std::cout << "Exiting the To-Do List program. Goodbye!" << std::endl;
                 break;
             default:
-                std::cout << "Invalid choice! Please try again."<< std::endl;
+                std::cout << "Invalid choice! Please try again." << std::endl;
         }
 
     } while (choice != 5);
